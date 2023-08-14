@@ -1,3 +1,5 @@
+import random
+
 """Crear cuatro listas:
 1. Con los nombres de su familia.
 2. Con los valores de la temperatura de un mes entero (mes a elección, pero definirlo).
@@ -57,7 +59,19 @@ datosFamilia[3325557] = "ferreyra lito"
 datosFamilia[3329986] = "silva fito"
 datosFamilia[33754216] = "gomez juan"
 
-numerosTelefonicos = {1: 35366884, 2: 35344788, 3: 3514788, 4: 35163398, 5: 3512314, 6: 35322244}
-
 print(datosFamilia)
-print(numerosTelefonicos)
+
+
+diccionario_telefonos = {}
+num_telefonos = 5
+
+for i in range(num_telefonos):
+    clave = f"codigo_{i + 1}"
+    numero_telefono = f"{random.randint(600000000, 699999999)}"  # Genera un número de teléfono ficticio
+    diccionario_telefonos[clave] = numero_telefono
+
+# Imprimir el diccionario con claves y valores
+for clave, valor in diccionario_telefonos.items():
+    print(f"Codigo: {clave}, Teléfono: {valor}")
+
+
