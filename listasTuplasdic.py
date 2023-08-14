@@ -21,13 +21,17 @@ temperaturaFebrero.sort()
 temperaturaMarzo = [36,37,38,36,35,34,35,32,34,35,36,36,35,32,32]
 temperaturaTotal = temperaturaFebrero + temperaturaMarzo
 tempOtraOpcion = [temperaturaFebrero, temperaturaMarzo] #otra opcion tipo matriz
-familia.remove("edelmira")
-del familia[3:5]
-ciudadesVisitadas.remove("rio 1º")
+removeFamilia = familia
+removeFamilia.remove("edelmira")
+del removeFamilia[3:5]
+removerCiudades = ciudadesVisitadas
+removerCiudades.remove("rio 1º")
 print(familia)
 print(temperaturaFebrero)
 print(temperaturaTotal)
 print(ciudadesVisitadas)
+print(removeFamilia)
+print(removerCiudades)
 print(eventosImportantes)
 print(tempOtraOpcion)
 
