@@ -40,7 +40,7 @@ print(tempOtraOpcion)
 """Crear tres tuplas con datos random.
 Crear una lista que las contenga y mostrarla."""
 
-locomotoras = (9099, 9100, 9022, 9090, 6617, 6621, 8287, 8280, 8282)
+locomotoras = (9099, 9100, 9022, 9090, 66175, 6621, 8287, 8280, 8282)
 basesRelevo = ("villa maria", "ferreyra", "cañada de gomez", "rio 3º", "rio 1º", "general deheza")
 coloresPrimarios = ("rojo", "azul", "amarillo")
 
