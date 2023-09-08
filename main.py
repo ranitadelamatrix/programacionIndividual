@@ -1,5 +1,4 @@
 from clases import *
-
 print("**************************************")
 print("*                                    *")
 print("*        ¡Bienvenido a tu curso!     *")
@@ -8,62 +7,48 @@ print("*                                    *")
 print("**************************************")
 print("")
 
+baseDeDatos = Curos1("28/09/202", "Base de datos", "veremos crud", "conseguir trabajo", "numero 1", 6500, "foto.jpg", 5, "disponible", 1)
+matematicas = Curos1("28/09/202", "logaritmo", "veremos sumas", "conseguir trabajo", "numero 1", 8000, "foto.jpg", 5, "disponible", 1)
+print(baseDeDatos)
+input("presiones enter para continuar viendo el codigo")
+baseDeDatos.estado_del_curso()
+baseDeDatos.agregarClases(der)
+input("presiones enter para continuar viendo el codigo")
 
+baseDeDatos.categoriaCurso()
+input("presiones enter para continuar viendo el codigo")
 
+baseDeDatos.verclases()
+input("presiones enter para continuar viendo el codigo")
 
+print("")
+kevin = Docente("ksler", "kevin", 33669317, "02/06/1988", "catamarca 2660", "villa maria", 5900, "cordoba", 385417268, "kkvin@hotmail.com")
+print(kevin)
+print("")
+input("presiones enter para continuar viendo el codigo")
 
-def registracionn():
-    usuario = int(input("Si usted desea registrase como estudiante presione 1\nSi usted desea registrarse como docente o administrador presione 2"))
-    if usuario == 1:
-        print("Registrate como usuario para poder comprar y acceder al aula, a continuacion te pediremos unos datos")
-        nombre = input('Nombre: ')
-        apellido =input('Apellido: ')
-        email=input('Email: ')
-        celular = int(input("celular: "))
-        dni = int(input("dni: "))
-        nacimiento = input("fecha de nacimiento: ")
-        direccion = input("dirección: ")
-        localidad = input("localidad: ")
-        codigo_postal = int(input("codigo postal: "))
-        provincia = input("Provincia: ")
+gaston = RegistrarUsuario("gaston", "trejo", 33693177, "catamarca", "02/06/1988", "villa maria", 5900, "cordoba", 3854172687, "gastontrejo9099@hotmail.com")
+print(gaston)
+input("presiones enter para continuar viendo el codigo")
 
-        usuario1 = RegistrarUsuario(nombre, apellido, dni, direccion, nacimiento, localidad, codigo_postal, provincia, celular, email)
-        usuario1.validacion()
+gaston.validacion()
+input("presiones enter para continuar viendo el codigo")
 
-    elif usuario == 2:
-        usuario2 = Usuarios()
-        usuario2.rol()
+gaston.agregarCurso(baseDeDatos)
+print("")
+input("presiones enter para continuar viendo el codigo")
 
-def verLosCursos():
-    print("Estos son los cursos disponbles")
-    print(matematicas.titulo, lengua.titulo, informatica.titulo)
-    ver = int(input("si desea ver el contenido presione 1"))
-    if ver == 1:
-        print("Estos son los cursos disponbles")
-        print(matematicas)
-        print("")
-        input("siguiente curso, presione enter para continuar")
-        print(lengua)
-        print("")
-        input("siguiente curso, presione enter para continuar")
-        print(informatica)
-        print("")
-    else:
-        print("gracias")
+cesaradmin = Administrador("martins", "cesar", 378889, "29/02/1990", "docta", "cordoba capital", 5000, "cordoba", 3512222, "cesarecrack@hotmail.com")
+adminProfe = Usuarios()
+adminProfe.rol(kevin, cesaradmin)
+input("presiones enter para continuar viendo el codigo")
 
+print("")
+carrito1 = Carrito(baseDeDatos)
+carrito2 = Carrito(matematicas)
+input("presiones enter para continuar viendo el codigo")
 
-def comprar():
-    matematicas = Curos1("22/09/2023", "matematicas", "polinomios", "aprender las funciones", "numero 1", 6000, "foto.jpg", 6, "disponible", "avanzado")
-    lengua = Curos1("22/09/2023", "lengua", "verbo", "aprender las ingles", "numero 1", 9000, "foto.jpg", 6, "no disponible", "inicial")
-    informatica = Curos1("22/09/2023", "informatica", "base de datos", "aprender crud", "numero 1", 12000, "foto.jpg", 6, "disponible", "avanzado")
-    mate = Carrito(matematicas)
-    info = Carrito(informatica)
-    comprar = int(input(f"si desea comprar los cursos presione1\nSi no presione 2"))
-    
-    if comprar == 1:
-        pagar = Pagos()
-        pagar.mediosPagos("gaston")
-
-
-
-
+print("")
+compra = Pagos()
+compra.verCursos()
+compra.mediosPagos(gaston)
