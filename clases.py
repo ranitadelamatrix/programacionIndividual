@@ -68,11 +68,8 @@ class Clases():
               self.URLDrive = URLDrive
        def __str__(self)->str:
               return f"Fecha de la clase {self.fecha}, Titulo {self.titulo}, El contenido {self.contenido}, Link del Drive {self.URLDrive}"
-matematica = Clases("23.85.99", "cmica", "matriz", "wwwww")
-lengua =   Clases("23.85.99", "literatura", "verbo", "wdddwwww")
-       
-curiiii = Curos1("22.55.88", "uno", "probando", "aprender", "2", 4000, "foto.png", 8, "disponible", 1)
-quiimica = Curos1("22.55.88", "quimicaaa", "probando", "aprender", "2", 4000, "foto.png", 8, "disponible", 1)
+
+baseDatos = Clases("22/09/2023", "dir", "virtual", "www.drive.com")
 
 
 
@@ -102,7 +99,7 @@ class Docente():
        def __str__(self) -> str:
               return f"DATOS DEL DOCENTE\nApellido {self.apellido}\nNombre {self.nombre}\nDNI {self.dni}\nNacimiento {self.nacimiento}\nDireccion {self.direccion}\nLocalidad {self.localidad}\nCodigo Postal {self.codigo_postal}\nProvincia {self.provincia}\ntelefono celular {self.celular}\nEmail {self.email}"
        
-docent = Docente("terjo", "gaston", 33669317, "02/06/1988", "catamarca 2660", "villa maria", 5900, "cordoba", 385417268, "gastontrejo9099@hotmail.com")
+kevin = Docente("ksler", "kevin", 33669317, "02/06/1988", "catamarca 2660", "villa maria", 5900, "cordoba", 385417268, "kkvin@hotmail.com")
 
 
 
@@ -112,7 +109,7 @@ nacimiento, dirección, localidad, código postal, provincia, teléfono celular,
 confirmar y reconfirmar una clave de acceso. Para la activación de la cuenta de usuario final se
 deberá validar que el email sea verdadero y esté en funcionamiento, enviando un correo
 automático al email registrado."""
-
+listaDeCursos = []
 class RegistrarUsuario():
        
        def __init__(self, nombre, apellido, dni, direccion, nacimiento, localidad, codigo_postal, provincia, celular, email):
@@ -126,8 +123,9 @@ class RegistrarUsuario():
               self.provincia = provincia
               self.celular = celular
               self.email = email
-              self.listaDeCursos = []
-
+              
+       def __str__(self)->str:
+              return f"DATOS DEL USUARIO\nApellido {self.apellido}\nNombre {self.nombre}\nDNI {self.dni}\nNacimiento {self.nacimiento}\nDireccion {self.direccion}\nLocalidad {self.localidad}\nCodigo Postal {self.codigo_postal}\nProvincia {self.provincia}\ntelefono celular {self.celular}\nEmail {self.email}"
        def get_apellido(self):
               return self.apellido
        def get_nombre(self):
@@ -164,14 +162,15 @@ class RegistrarUsuario():
                      else:
                             print("correo no valido")
        def agregarCurso(self, a):
-              self.listaDeCursos.append(a)
+              listaDeCursos.append(a)
               print("se agrego curso", a.titulo)
+       
 
               
 
 
 
-gas = RegistrarUsuario("gaston", "trejo", 336699, "vatamar", "12/15/15", "villa maria", 5900, "cordoba", 3854172687, "gastontrejo9099@hotmail.com")
+
 
 
 
@@ -212,7 +211,7 @@ class Usuarios():
                      localidad = input("localidad: ")
                      codigo_postal = int(input("codigo postal: "))
                      provincia = input("Provincia: ")
-                     docente1 = Docente(apellido, nombre, dni, nacimiento, direccion, localidad,codigo_postal,provincia, celular, email )
+                     docente1 = Docente(apellido, nombre, dni, nacimiento, direccion, localidad,codigo_postal,provincia, celular, email)
                      
                      print("Bienvenido profe a continuacion corrboraremos sus datos para crear su usario al curso")
                      input("verifique sus datos a continuacion, presiones enter")
@@ -257,7 +256,7 @@ class Usuarios():
                                    else:
                                           print("no coinciden las contraseñas vuelva a intentar ")
 
-abb = Usuarios()
+
 
 
 
@@ -278,7 +277,7 @@ listaDeCurso = []
 class Carrito():
              
               def __init__(self, a):
-                     self.curso = a
+                     
                      print(f"-----Usted eligio el curso de: \n{a.titulo}\nFoto{a.foto}\nDuracion {a.duracion_meses}\nCon un costo de {a.costo} pesos")
                      res = input(f"desea agregar {a.titulo} al carrito de compras? digite si ")
                      if res == "si":
@@ -302,7 +301,7 @@ class Pagos():
                      total = recargo + self.resultado
                      print("Usted a elegido tarjeta de credito, tiene un recargo de el 10 por ciento el total es: ", total)
                      print("")
-                     nombreusuario = a.nombre
+                     nombreusuario = a
                      numeroTarjeta = int(input("Ingrese el numero de tarjeta por favor"))
                      nombreTitular = input("Ingrese el nombre que figura en al tarjeta")
                      codigo = int(input("ingrese el codigo de seguridad que figura al dorso de la tarjeta"))
@@ -313,7 +312,7 @@ class Pagos():
 
                      correcto = int(input("desea confirmar digite 1: "))
                      if correcto == 1:
-                            print("Compra exitosa, se a enviado la factura a su correo electronico ", a.email)
+                            print("Compra exitosa, se a enviado la factura a su correo electronico ", a)
 
 
               elif pagos == 2:
