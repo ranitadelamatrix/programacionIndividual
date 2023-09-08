@@ -199,12 +199,24 @@ asociado un estado (Activo / Inactivo)."""
 
 class Usuarios():
        
-       def rol(self, a):
+       def rol(self):
               rol = int(input("si desea incribirse como docente presione 1 ""\n""si desesa incribirse como administrador presione 2 "))
               if rol == 1:
+                     nombre = input('Nombre: ')
+                     apellido =input('Apellido: ')
+                     email=input('Email: ')
+                     celular = int(input("celular: "))
+                     dni = int(input("dni: "))
+                     nacimiento = input("fecha de nacimiento: ")
+                     direccion = input("dirección: ")
+                     localidad = input("localidad: ")
+                     codigo_postal = int(input("codigo postal: "))
+                     provincia = input("Provincia: ")
+                     docente1 = Docente(apellido, nombre, dni, nacimiento, direccion, localidad,codigo_postal,provincia, celular, email )
                      
                      print("Bienvenido profe a continuacion corrboraremos sus datos para crear su usario al curso")
-                     print(a)
+                     input("verifique sus datos a continuacion, presiones enter")
+                     print(docente1)
                      correcion = int(input("Si sus datos son correcto presione 1, si no presione 2 "))
                      if correcion == 1:
                             generar = input("Genere su contraseña, recuerde que ambas deben coincidir, presione enter para continuar")
@@ -212,14 +224,26 @@ class Usuarios():
                                    clave1 = input("Ingrese una clave por favor: ")
                                    clave2=input ("Repita la clave para confirmarla: ")
                                    if clave1==clave2:
-                                          print(f"Se a enviado un correo automatico a {a.email} para su validacion")
+                                          print(f"Se a enviado un correo automatico a {docente1.email} para su validacion")
                                           print("Una vez validada ya podra interactuar con el curos")
                                           break
                                    else:
                                           print("no coinciden las contraseñas vuelva a intentar ")
               elif rol == 2:
                      print("Bienvenido como administrado, a continuacion corraboraremos sus datos para crear su usasrio")
-                     print(a)
+                     nombre = input('Nombre: ')
+                     apellido =input('Apellido: ')
+                     email=input('Email: ')
+                     celular = int(input("celular: "))
+                     dni = int(input("dni: "))
+                     nacimiento = input("fecha de nacimiento: ")
+                     direccion = input("dirección: ")
+                     localidad = input("localidad: ")
+                     codigo_postal = int(input("codigo postal: "))
+                     provincia = input("Provincia: ")
+                     admin1 = Administrador(apellido, nombre, dni, nacimiento, direccion, localidad,codigo_postal,provincia, celular, email )
+                     input("verifique sus datos a continuacion, presiones enter")
+                     print(admin1)
                      correcion = int(input("Si sus datos son correcto presione 1, si presione 2 "))
                      if correcion == 1:
                             generar = input("Genere su contraseña, recuerde que ambas deben coincidir, presione enter para continuar")
@@ -227,7 +251,7 @@ class Usuarios():
                                    clave1 = input("Ingrese una clave por favor: ")
                                    clave2=input ("Repita la clave para confirmarla: ")
                                    if clave1==clave2:
-                                          print(f"Se a enviado un correo automatico a {a.email} para su validacion")
+                                          print(f"Se a enviado un correo automatico a {admin1.email} para su validacion")
                                           print("Una vez validada ya podra interactuar con el curos")
                                           break
                                    else:
