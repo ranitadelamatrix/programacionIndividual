@@ -28,7 +28,48 @@ class Curos1():
                 self.estado = estado
                 self.categoria = categoria
                 
-
+       def get_fecha(self):
+              return self.fecha
+       def set_fecha(self, fecha):
+              self.fecha = fecha
+       def get_titulo(self):
+              return self.titulo
+       def set_titulo(self, titulo):
+              self.titulo=titulo
+       def get_descripcion(self):
+              return self.descripcion
+       def set_descripcion(self, descripcion):
+              self.descripcion = descripcion
+       def get_objetivos(self):
+              return self.objetivos
+       def set_objetivos(self, objetivos):
+              self.objetivos = objetivos
+       def get_programa(self):
+              return self.programa
+       def set_programa(self, programa):
+              self.programa = programa
+       def get_costo(self):
+              return self.costo
+       def set_costo(self, costo):
+              self.costo = costo
+       def get_foto(self):
+              return self.foto
+       def set_foto(self, foto):
+              self.foto = foto
+       def get_duracion(self):
+              return self.duracion_meses
+       def set_duracion(self, duracion_meses):
+              self.duracion_meses = duracion_meses
+       def get_estado(self):
+              return self.estado
+       def set_estado(self, estado):
+              self.estado = estado
+       def get_categoria(self):
+              return self.categoria
+       def set_categoria(self, categoria):
+              self.categoria = categoria
+       
+       
        def __str__(self) -> str:
           return f"Hola bienvenido al curso de {self.titulo} \nel mismo comieza el dia {self.fecha}\nen el veremos {self.descripcion}\nnuestro objetivo es que {self.objetivos}\nnuestro programa es {self.programa}\nel curso tiene un valor de {self.costo}\ntu foto de perfil es {self.foto}\nel mismo tiene una duracion de {self.duracion_meses} mesess"
     
@@ -52,6 +93,7 @@ class Curos1():
               for i in listadeclasess:
                      print(i)
         
+       
 """Por otro lado, los cursos contienen un conjunto de clases,
 en donde por cada clase se debe
 mostrar la fecha, título, contenido, URLDrive."""
@@ -67,7 +109,23 @@ class Clases():
               self.URLDrive = URLDrive
        def __str__(self)->str:
               return f"Fecha de la clase {self.fecha}, Titulo {self.titulo}, El contenido {self.contenido}, Link del Drive {self.URLDrive}"
-
+       def get_fecha(self):
+              return self.fecha
+       def set_fecha(self, fecha):
+              self.fecha = fecha
+       def get_titulo(self):
+              return self.titulo
+       def set_titulo(self, titulo):
+              self.titulo = titulo
+       def get_contenido(self):
+              return self.contenido
+       def set_contenido(self, contenido):
+              self.contenido = contenido
+       def get_urldrive(self):
+              return self.URLDrive
+       def set_urldrive(self, URLDrive):
+              self.URLDrive = URLDrive
+       
 der = Clases("22/09/2023", "DER", "virtual", "www.drive.com")
 
 
@@ -97,8 +155,47 @@ class Docente():
 
        def __str__(self) -> str:
               return f"DATOS DEL DOCENTE\nApellido {self.apellido}\nNombre {self.nombre}\nDNI {self.dni}\nNacimiento {self.nacimiento}\nDireccion {self.direccion}\nLocalidad {self.localidad}\nCodigo Postal {self.codigo_postal}\nProvincia {self.provincia}\ntelefono celular {self.celular}\nEmail {self.email}"
+       def get_apellido(self):
+              return self.apellido
+       def set_apellido(self, apellido):
+              self.apellido = apellido
+       def get_nombre(self):
+              return self.nombre
+       def set_nombre(self, nombre):
+              self.nombre = nombre
+       def get_dni(self):
+              return self.dni
+       def set_dni(self, dni):
+              self.dni = dni
+       def get_nacimiento(self):
+              return  self.nacimiento
+       def set_nacimiento(self, nacimiento):
+              self.nacimiento = nacimiento
+       def get_direccion(self):
+              return self.direccion
+       def set_direccion(self, direccion):
+              self.direccion = direccion
+       def get_localidad(self):
+              return self.localidad
+       def set_localidad(self, localidad):
+              self.localidad = localidad
+       def get_codigo_postal(self):
+              return self.codigo_postal
+       def set_codigo_postal(self, codigo_postal):
+              self.codigo_postal = codigo_postal
+       def get_provincia(self):
+              return self.provincia
+       def set_provincia(self, provincia):
+              self.provincia = provincia
+       def get_celular(self):
+              return self.celular
+       def set_celular(self, celular):
+              self.celular = celular
+       def get_email(self):
+              return self.email
+       def set_email(self, email):
+              self.email = email
        
-
 
 
 
@@ -127,12 +224,44 @@ class RegistrarUsuario():
               return f"DATOS DEL USUARIO\nApellido {self.apellido}\nNombre {self.nombre}\nDNI {self.dni}\nNacimiento {self.nacimiento}\nDireccion {self.direccion}\nLocalidad {self.localidad}\nCodigo Postal {self.codigo_postal}\nProvincia {self.provincia}\ntelefono celular {self.celular}\nEmail {self.email}"
        def get_apellido(self):
               return self.apellido
+       def set_apellido(self, apellido):
+              self.apellido = apellido
        def get_nombre(self):
               return self.nombre
+       def set_nombre(self, nombre):
+              self.nombre = nombre
        def get_dni(self):
               return self.dni
+       def set_dni(self, dni):
+              self.dni = dni
+       def get_nacimiento(self):
+              return  self.nacimiento
+       def set_nacimiento(self, nacimiento):
+              self.nacimiento = nacimiento
+       def get_direccion(self):
+              return self.direccion
+       def set_direccion(self, direccion):
+              self.direccion = direccion
+       def get_localidad(self):
+              return self.localidad
+       def set_localidad(self, localidad):
+              self.localidad = localidad
+       def get_codigo_postal(self):
+              return self.codigo_postal
+       def set_codigo_postal(self, codigo_postal):
+              self.codigo_postal = codigo_postal
+       def get_provincia(self):
+              return self.provincia
+       def set_provincia(self, provincia):
+              self.provincia = provincia
+       def get_celular(self):
+              return self.celular
+       def set_celular(self, celular):
+              self.celular = celular
        def get_email(self):
               return self.email
+       def set_email(self, email):
+              self.email = email
 
 
        def validacion(self):
@@ -187,7 +316,46 @@ class Administrador():
 
        def __str__(self) -> str:
               return f"DATOS DEL ADMINISTRADOR\nApellido {self.apellido}\nNombre {self.nombre}\nDNI {self.dni}\nNacimiento {self.nacimiento}\nDireccion {self.direccion}\nLocalidad {self.localidad}\nCodigo Postal {self.codigo_postal}\nProvincia {self.provincia}\ntelefono celular {self.celular}\nEmail {self.email}"
-
+       def get_apellido(self):
+              return self.apellido
+       def set_apellido(self, apellido):
+              self.apellido = apellido
+       def get_nombre(self):
+              return self.nombre
+       def set_nombre(self, nombre):
+              self.nombre = nombre
+       def get_dni(self):
+              return self.dni
+       def set_dni(self, dni):
+              self.dni = dni
+       def get_nacimiento(self):
+              return  self.nacimiento
+       def set_nacimiento(self, nacimiento):
+              self.nacimiento = nacimiento
+       def get_direccion(self):
+              return self.direccion
+       def set_direccion(self, direccion):
+              self.direccion = direccion
+       def get_localidad(self):
+              return self.localidad
+       def set_localidad(self, localidad):
+              self.localidad = localidad
+       def get_codigo_postal(self):
+              return self.codigo_postal
+       def set_codigo_postal(self, codigo_postal):
+              self.codigo_postal = codigo_postal
+       def get_provincia(self):
+              return self.provincia
+       def set_provincia(self, provincia):
+              self.provincia = provincia
+       def get_celular(self):
+              return self.celular
+       def set_celular(self, celular):
+              self.celular = celular
+       def get_email(self):
+              return self.email
+       def set_email(self, email):
+              self.email = email
 
 """Los usuarios públicos registrados pueden inscribirse a uno o más cursos. Además, el sitio
 deberá proveer la posibilidad de registrar 2 roles más de usuarios quienes también tendrán
