@@ -39,7 +39,7 @@ print("")
 input("presiones enter para continuar viendo el codigo")
 
 cesaradmin = Administrador("martins", "cesar", 378889, "29/02/1990", "docta", "cordoba capital", 5000, "cordoba", 3512222, "cesarecrack@hotmail.com")
-adminProfe = Usuarios()
+adminProfe = Roles()
 adminProfe.rol(kevin, cesaradmin)
 input("presiones enter para continuar viendo el codigo")
 
@@ -49,6 +49,6 @@ carrito2 = Carrito(matematicas)
 input("presiones enter para continuar viendo el codigo")
 
 print("")
-compra = Pagos()
+compra = Compra()
 compra.verCursos()
 compra.mediosPagos(gaston)
