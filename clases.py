@@ -1,5 +1,6 @@
 import re
 import datetime
+from enum import Enum
 
 from validate_email_address import validate_email
 
@@ -241,19 +242,6 @@ class Docente(RegistrarUsuario):
        def __str__(self) -> str:
               return f"DATOS DEL DOCENTE\nApellido {self.apellido}\nNombre {self.nombre}\nDNI {self.dni}\nNacimiento {self.nacimiento}\nDireccion {self.direccion}\nLocalidad {self.localidad}\nCodigo Postal {self.codigo_postal}\nProvincia {self.provincia}\ntelefono celular {self.celular}\nEmail {self.email}"
        
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Administrador(RegistrarUsuario):
        
 
@@ -333,7 +321,7 @@ class Carrito():
                             print("se agrego ", a.titulo)
               
               
-class Compra():
+class Pago():
        def __init__(self)->None:
                      self.resultado = 0
                      for i in listaDeCurso:
@@ -387,4 +375,30 @@ class Compra():
                      print("Usted a elegido tranferencia")
                      print(f"Nombre del usuario: {a.nombre}          fecha: {fecha}\nNumero de la compra de {cantidad} cursos por el monto de {self.resultado}")
                      print(f"El alias es CursosOnline, una vez que alla realizado la tranferencia enviarnos el comprobante de pago al email cursosonlines@hotmail.com\nEl impacto del mismo puede demorara 24 hs\nLuego se le enviara un email a {a.email} para confirmar su compra")
+
+class Compra():
+       def __init__(self, id_compra, id_carrito_compra, id_medios_de_pagos, id_usuarios, fecha, monto_total):
+              self.id_compra = id_compra
+              self.id_carrito = id_carrito_compra
+              self.id_meidosPagos = id_medios_de_pagos
+              self.id_usuarios = id_usuarios
+              self.fecha = fecha
+              self.monto_total = monto_total
+
+class MediosContactos():
+       def __init__(self, id_medioContacto, fecha, email, telefono, direccion, nombre):
+              self.id_medioContacto = id_medioContacto
+              self.fecha = fecha
+              self.email = email
+              self.telefono = telefono
+              self.direccion = direccion
+              self.nombre = nombre
+
+class Tipos_medioContacto(MediosContactos(Enum)):
+       whasapp = 1
+       correoElectronico = 2
+       call_center = 3
+       referido_interno = 4
 #-------------------------------------------------------------------------------------------------------------
+ver = Tipos_medioContacto()
+print(ver.call_center)

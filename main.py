@@ -49,6 +49,6 @@ carrito2 = Carrito(matematicas)
 input("presiones enter para continuar viendo el codigo")
 
 print("")
-compra = Compra()
+compra = Pago()
 compra.verCursos()
 compra.mediosPagos(gaston)
