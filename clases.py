@@ -394,15 +394,14 @@ class MediosContactos():
               self.direccion = direccion
               self.nombre = nombre
 
-class Tipos_medioContacto(Enum):
+class Tipos_medioContacto(MediosContactos):
        whatsapp = 1
        correoElectronico = 2
        call_center = 3
        referido_interno = 4
 
-contacto = MediosContactos(Tipos_medioContacto.whatsapp,"27/09/2023", "gaston trejo", 66666, "catamarca 2620", "gaston")
+contacto = Tipos_medioContacto(22,"27/09/2023", "gaston@hotmail.com", 66666, "catamarca 2620", "gaston")
 
-print(contacto.id_medioContacto)
 
 #-------------------------------------------------------------------------------------------------------------
 
